@@ -94,4 +94,21 @@ var netTotal = 0;
 for (let i=0; i<finances.length; i++) {
     netTotal += finances[i][1]; 
 }
-console.log("Total: $" + netTotal)
+console.log("Total: $" + netTotal);
+
+
+
+var average = 0
+var totalChange = 0
+var startValue = 0
+for (let i=0; i<finances.length; i++) {
+  average = finances[i][1] - startValue;
+  totalChange += average;
+  startValue = parseInt(finances[i][1])
+}
+console.log("Average Change: " + (Math.round(100 *(totalChange - finances[0][1]) / (finances.length -1)))/100)
+
+
+
+
+
