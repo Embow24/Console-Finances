@@ -88,9 +88,11 @@ var finances = [
 ];
 
 console.log("Financial Analysis")
+
+//The number of months in the dataset
 console.log("Total number of months: " + finances.length)
 
-
+//The net total amount of profit/loss over the entire period
 var netTotal = 0;
 for (let i=0; i<finances.length; i++) {
     netTotal += finances[i][1]; 
@@ -103,6 +105,7 @@ var totalChange = 0
 var startValue = 0
 var greatestDifference = []
 
+//The average of the changes in profit/loss over the entire period
 for (let i=0; i<finances.length; i++) {
   average = finances[i][1] - startValue;
   startValue = parseInt(finances[i][1])
@@ -112,10 +115,11 @@ for (let i=0; i<finances.length; i++) {
 console.log("Average Change: " + (Math.round(100 *(totalChange - finances[0][1]) / (finances.length -1)))/100) //
 
 
-
+//The greatest increase in profit/loss over the entire period
 greatestDifference.sort(function(a, b){return b - a});
 console.log("Greatest increase in profits/losses: Feb-2012 ($" + greatestDifference[0] + ")")
 
+//The greatest decrease in profit/loss over the entire period
 greatestDifference.sort(function(a, b){return a - b});
 console.log("Greatest decrease in profits/losses: Sep-2013 ($" + greatestDifference[0] + ")")
 
