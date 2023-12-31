@@ -100,17 +100,16 @@ for (let i=0; i<finances.length; i++) {
 console.log("Total: $" + netTotal);
 
 
-var average = 0
 var totalChange = 0
 var startValue = 0
 var greatestDifference = []
 
 //The average of the changes in profit/loss over the entire period
 for (let i=0; i<finances.length; i++) {
-  average = finances[i][1] - startValue;
+let average = finances[i][1] - startValue;
   startValue = parseInt(finances[i][1])
-  greatestDifference.push(average); 
   totalChange += average;
+  greatestDifference.push(average); 
 }
 console.log("Average Change: " + (Math.round(100 *(totalChange - finances[0][1]) / (finances.length -1)))/100) //
 
