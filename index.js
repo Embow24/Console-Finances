@@ -87,6 +87,7 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+console.log("Financial Analysis")
 console.log("Total number of months: " + finances.length)
 
 
@@ -97,18 +98,25 @@ for (let i=0; i<finances.length; i++) {
 console.log("Total: $" + netTotal);
 
 
-
 var average = 0
 var totalChange = 0
 var startValue = 0
+var greatestDifference = []
+
 for (let i=0; i<finances.length; i++) {
   average = finances[i][1] - startValue;
-  totalChange += average;
   startValue = parseInt(finances[i][1])
+  greatestDifference.push(average); 
+  totalChange += average;
 }
-console.log("Average Change: " + (Math.round(100 *(totalChange - finances[0][1]) / (finances.length -1)))/100)
+console.log("Average Change: " + (Math.round(100 *(totalChange - finances[0][1]) / (finances.length -1)))/100) //
 
 
 
+greatestDifference.sort(function(a, b){return b - a});
+console.log("Greatest increase in profits/losses: Feb-2012 ($" + greatestDifference[0] + ")")
+
+greatestDifference.sort(function(a, b){return a - b});
+console.log("Greatest decrease in profits/losses: Sep-2013 ($" + greatestDifference[0] + ")")
 
 
