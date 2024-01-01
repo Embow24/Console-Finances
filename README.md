@@ -7,11 +7,11 @@ This project uses HTML and JavaScript to display the analysis of a companies fin
 N/A
 
 # Usage
-To see what the JavaScript code is doing in this project the console on the webpage needs to be opened. in order to do this, open the webpage, right click on the webpage and open inspect. Once inspect opens on the right side of the web browser go to the top and click console. This will display the results of the console.log codes in the index.js file.
+To see what the JavaScript code is doing in this project the console on the webpage needs to be opened. In order to do this, open the webpage, right click on the webpage and open inspect. Once inspect opens on the right side of the web browser go to the top and click console. This will display the results of the console.log codes in the index.js file.
 
 To access the webpage click this link: https://embow24.github.io/Console-Finances/ 
 
-Below is a screenshot of the console displaying the analyasis of the financil data created in the index.js file:
+Below is a screenshot of the console displaying the analyasis of the financial data created in the index.js file:
 
 ![screenshot](image/ScreenShot.png)
 
